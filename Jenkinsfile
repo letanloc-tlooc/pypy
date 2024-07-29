@@ -8,6 +8,12 @@ pipeline {
                 git 'https://github.com/letanloc-tlooc/pypy.git'
             }
         }
+        stage('Setup Environment') {
+            steps {
+                echo 'Setting up the environment...'
+                sh 'pip3 install -r demo_py/requirements.txt'
+            }
+        }
 
         stage('Run demo.py') {
             steps {
