@@ -9,10 +9,11 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Run demo.py') {
             steps {
-                // Các bước build (nếu có)
-                echo 'Building...'
+                echo 'Running demo1.py...'
+                // Chạy file demo.py
+                sh 'python3 demo/demo1.py'
             }
         }
 
